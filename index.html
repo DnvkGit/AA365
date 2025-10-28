@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>అక్షరాల అమరిక</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  <header>
+    <h1>అక్షరాల అమరిక</h1>
+    <div class="sub">మన తెలుగు, మన భవిష్యత్తు</div>
+    <div id="randomLabel" class="random-label" style="display:none;">Random</div>
+  </header> 
+ 
+
+<header>
+  <div class="header-row">
+    <h1>అక్షరాల అమరిక</h1>
+	
+    <button id="helpBtn" class="help-btn">?</button>
+  </div>
+  <div class="sub">మన తెలుగు, మన భవిష్యత్తు</div>
+  <div id="randomLabel" class="random-label" style="display:none;">Random</div>
+</header>  commented on 17 Aug to bring Random label below Help Button -->
+<header>
+  <div class="header-row">
+    <h1>అక్షరాల అమరిక</h1>
+	<div id="topRightControls">
+		<button id="helpBtn" class="help-btn">?</button>
+	    <div id="randomLabel" class=random-label" style = "display:none;">Random</div>
+    </div>
+  </div>
+  <div class="sub">మన తెలుగు, మన భవిష్యత్తు</div>
+  <!-- <div id="randomLabel" class="random-label" style="display:none;">Random</div>  -->
+</header>
+ 
+  
+
+  <main class="container">
+    <section class="center">
+
+      <div class="cartoonBox" id="cartoonBox">
+		  <img id="cartoonImg" src="" alt="cartoon" />
+      </div>
+
+      <div id="captionArea" class="captionArea">
+        <div class="captionLabel">శీర్షిక(Caption)</div>
+        <div id="captionCells" class="captionCells"></div>
+      </div>
+      <div id="captionControls" class="controls" style="display:none;">
+        <button id="resetCaptionBtn">Reset Caption</button>
+        <button id="confirmCaptionBtn">Confirm Caption</button>
+      </div>
+<!-- Change done on 18thAug to bring up Answer cells in work area above jumble cells
+      <div id="workArea" class="workArea" hidden>
+        <div class="workTitle">Work Area</div>
+        <div id="pool" class="pool"></div>
+        <div id="answerRow" class="answerRow"></div>
+        <div class="controls">
+          <button id="resetBtn">Reset</button>
+          <button id="confirmBtn">Confirm</button>
+        </div>
+        <div id="hint" class="hint"></div>
+      </div>
+-->
+		<div id="workArea" class="workArea" hidden>
+		  <div class="workTitle">Work Area</div>
+		  <div class="rowLabel">పదము</div>
+		  <div id="answerRow" class="answerRow"></div>
+		  <div class="rowLabel">మిళితము(Jumbles)</div>
+		  <div id="pool" class="pool"></div>
+		  <div class="controls">
+			<button id="resetBtn">Reset</button>
+			<button id="confirmBtn">Confirm</button>
+		  </div>
+		  <div id="hint" class="hint"></div>
+		</div>
+
+
+      <div class="hlArea" id="hlArea">
+        <div class="hlTitle">గుర్తించబడిన గళ్ళ అక్షరములతో శీర్షిక పొందుపరచండి </div>
+        <div id="hlPool" class="hlPool"></div>
+      </div>
+    </section>
+
+    <section class="left">
+      <h2>Jumbles</h2>
+      <div id="jumblesList" class="jumblesList"></div>
+    </section>
+
+    <section class="right">
+      <h2>Info</h2>
+      <div id="info" class="info">Select a Jumble to start.</div>
+    </section>
+  </main>
+
+  <div id="congratsPopup" class="popup" style="display:none" >
+    <div class="popup-content">
+    🎉 Congratulations! Caption Solved! 🎉
+    <!-- <div class="stars"></div>   -->
+  </div>
+</div>
+  
+  <div id="congratsJPopup" class="popup" style="display:none">
+    <div class="popup-content">
+      🎉 పదాలు చక్కగా అమర్చారు! ఇక చిత్రానికి శీర్షిక వ్రాయండి! 🎉
+      <!-- <div class="stars"></div> -->
+    </div>
+  </div>
+
+
+<div id="helpOverlay" class="help-overlay" style="display:none;">
+  <div class="help-content">
+    <h2>అక్షరాల అమరికకు స్వాగతం</h2>
+    <ul>
+      <li class="line-purple">Cartoon Area – Tap to zoom, tap again to close.</li>
+      <li class="line-blue">Jumble Area – Tap a word to move to Work Area.</li>
+      <li class="line-teal">Work Area – Tap syllables in order to form the word.</li>
+      <li class="line-green">HL Pool – Collects important syllables for the caption.</li>
+      <li class="line-orange">Caption Area – Arrange syllables to form the final caption.</li>
+	  <li class="line-purple">For Puzzle Reset Click Button🔄 at Bottom  </li>
+    </ul>
+    <p>ప్రతిరోజు ఒక కొత్త పజిల్ మీ కోసం!</p>
+	
+    <button id="closeHelp" class="close-help">Close</button>
+	<ul>
+		<li  class="line-black" </li>
+		<li  class="line-black" </li>
+	</ul>
+	<button id="restartBtn" class="restart-btn">                                 🔄 Reset Puzzle</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
